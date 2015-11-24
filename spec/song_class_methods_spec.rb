@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe "Song Class Methods" do
   describe '.create' do
@@ -28,9 +29,11 @@ describe "Song Class Methods" do
 
   describe '.find_by_name' do
     it 'can find a song present in @@all by name' do
-      song = Song.create_by_name("Blank Spaces")
+      song_1 = Song.create_by_name("Blank Spaces")
+      song_2 = Song.create_by_name("Hello")
+      song_3 = Song.create_by_name("Hotline Bling")
 
-      expect(Song.find_by_name("Blank Spaces")).to eq(song)
+      expect(Song.find_by_name("Hello")).to eq(song_1)
     end
   end
 
@@ -38,8 +41,9 @@ describe "Song Class Methods" do
     it 'finds or creates a song by name maintaining uniqueness of objects by name property' do
       song_1 = Song.find_or_create_by_name("Blank Spaces")
       song_2 = Song.find_or_create_by_name("Blank Spaces")
-
-      expect(song_1).to eq(song_2)
+      expect(song_1).to be_a(Song)
+      expect(song_2).to be_a(Song)
+      expect(song_1.name).to eq(song_2.name)
     end
   end
 
@@ -69,5 +73,12 @@ describe "Song Class Methods" do
       expect(song_match.name).to eq("For Love I Come")
       expect(song_match.artist_name).to eq("Thundercat")
     end
+  end
+
+  describe '.destroy_all' do
+    it 'clears all the song instances from the @@all array' do 
+      Song.destroy_all
+      expect(Song.all).to eq([])
+    end 
   end
 end
