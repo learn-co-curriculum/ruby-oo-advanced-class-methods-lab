@@ -85,7 +85,7 @@ Consider:
 song_1 = Song.find_or_create_by_name("Blank Space")
 song_2 = Song.find_or_create_by_name("Blank Space")
 
-# song_1 and song_1 are conceptually the same song and should return the same song instance because of `.find_or_create_by_name.`
+# song_1 and song_2 are conceptually the same song and should return the same song instance because of `.find_or_create_by_name.`
 
 song_1 == song_2 #=> true
 ```
@@ -115,3 +115,5 @@ Build a class constructor that accepts a filename in the format of "<Artist Name
 ### `Song.destroy_all`
 
 The `Song.destroy_all` class method should reset the state of the `@@all` class variable to an empty array thereby deleting all previous song instances.
+
+<a href='https://learn.co/lessons/ruby-advanced-class-methods-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
