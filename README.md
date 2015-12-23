@@ -58,8 +58,7 @@ Consider:
 
 ```ruby
 song = Song.create_by_name("The Middle")
-#=> Return value of: "The Middle"
-song #=> #<Song @name="The Middle">
+#=> Return value of: #<Song @name="The Middle">
 Song.all.include?(song) #=> true
 ```
 
