@@ -58,9 +58,11 @@ Consider:
 
 ```ruby
 song = Song.create_by_name("The Middle")
-#=> Return value of: "The Middle"
-song #=> #<Song @name="The Middle">
-Song.all.include?(song) #=> true
+#=> #<Song:0x007fd2a2989ff0 @name="The Middle">
+song
+#=> #<Song:0x007fd2a2989ff0 @name="The Middle">
+Song.all.include?(song)
+#=> true
 ```
 
 ### `Song.find_by_name`
