@@ -118,4 +118,4 @@ Build a class constructor that accepts a filename in the format of "<Artist Name
 
 The `Song.destroy_all` class method should reset the state of the `@@all` class variable to an empty array thereby deleting all previous song instances.
 
-<a href='https://learn.co/lessons/ruby-advanced-class-methods-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-advanced-class-methods-lab' title='Ruby Advanced Class Methods Lab'>Ruby Advanced Class Methods Lab</a> on Learn.co and start learning to code for free.</p>
