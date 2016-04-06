@@ -36,7 +36,7 @@ Build a class constructor `Song.create` that initializes a song and saves it to 
 Consider:
 
 ```ruby
-song = Song.create("The Middle")
+song = Song.create
 Song.all.include?(song) #=> true
 ```
 
@@ -119,3 +119,5 @@ Build a class constructor that accepts a filename in the format of "<Artist Name
 The `Song.destroy_all` class method should reset the state of the `@@all` class variable to an empty array thereby deleting all previous song instances.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-advanced-class-methods-lab' title='Ruby Advanced Class Methods Lab'>Ruby Advanced Class Methods Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-advanced-class-methods-lab'>Advanced Class Methods Lab</a> on Learn.co and start learning to code for free.</p>
