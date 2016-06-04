@@ -102,7 +102,7 @@ Use [Array#sort_by](http://ruby-doc.org/core-2.2.3/Enumerable.html#method-i-sort
 
 Build a class constructor that accepts a filename in the format of "<Artist Name> - <Song Name>.mp3", for example "Taylor Swift - Blank Space.mp3".
 
-Given `Song.new_from_filename("Taylor Swift - Blank Space.mp3")`, the constructor should return a new `Song` instance with the song name set to Blank Space and the artist_name set to Taylor Swift. The filename input sent to `Song.new_from_filename` in the format of `Taylor Swift - Blank Space.mp3` must be parsed for the relevant components. Seperate the artist name from the rest of the data based on the ` - ` delimiter. Don't forget that when you parse the song name, you have to remove the `'.mp3'` part of the string.
+Given `Song.new_from_filename("Taylor Swift - Blank Space.mp3")`, the constructor should return a new `Song` instance with the song name set to Blank Space and the artist_name set to Taylor Swift. The filename input sent to `Song.new_from_filename` in the format of `Taylor Swift - Blank Space.mp3` must be parsed for the relevant components. Separate the artist name from the rest of the data based on the ` - ` delimiter. Don't forget that when you parse the song name, you have to remove the `'.mp3'` part of the string.
 
 ```ruby
 song = Song.new_from_filename("Taylor Swift - Blank Space.mp3")
@@ -121,3 +121,5 @@ The `Song.destroy_all` class method should reset the state of the `@@all` class 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-advanced-class-methods-lab' title='Ruby Advanced Class Methods Lab'>Ruby Advanced Class Methods Lab</a> on Learn.co and start learning to code for free.</p>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-advanced-class-methods-lab'>Advanced Class Methods Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/ruby-advanced-class-methods-lab'>Advanced Class Methods Lab</a> on Learn.co and start learning to code for free.</p>
