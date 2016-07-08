@@ -19,7 +19,7 @@ describe "Song Class Methods" do
   end
 
   describe '.create_by_name' do
-    it 'instanties and saves a song with a name property' do
+    it 'instantiates and saves a song with a name property' do
       song = Song.create_by_name("Blank Spaces")
 
       expect(song.name).to eq("Blank Spaces")
@@ -38,7 +38,7 @@ describe "Song Class Methods" do
   end
 
   describe '.find_or_create_by_name' do
-    it 'finds or creates a song by name maintaining uniqueness of objects by name property' do
+    it 'finds or creates a song by name, maintaining uniqueness of objects by name property' do
       song_1 = Song.find_or_create_by_name("Blank Spaces")
       song_2 = Song.find_or_create_by_name("Blank Spaces")
       expect(song_1).to be_a(Song)
