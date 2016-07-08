@@ -12,24 +12,24 @@ describe "Song Class Methods" do
 
   describe '.new_by_name' do
     it 'instantiates a song with a name property' do
-      song = Song.new_by_name("Blank Spaces")
+      song = Song.new_by_name("Blank Space")
 
-      expect(song.name).to eq("Blank Spaces")
+      expect(song.name).to eq("Blank Space")
     end
   end
 
   describe '.create_by_name' do
     it 'instantiates and saves a song with a name property' do
-      song = Song.create_by_name("Blank Spaces")
+      song = Song.create_by_name("Blank Space")
 
-      expect(song.name).to eq("Blank Spaces")
+      expect(song.name).to eq("Blank Space")
       expect(Song.all).to include(song)
     end
   end
 
   describe '.find_by_name' do
     it 'can find a song present in @@all by name' do
-      song_1 = Song.create_by_name("Blank Spaces")
+      song_1 = Song.create_by_name("Blank Space")
       song_2 = Song.create_by_name("Hello")
       song_3 = Song.create_by_name("Hotline Bling")
 
@@ -39,8 +39,8 @@ describe "Song Class Methods" do
 
   describe '.find_or_create_by_name' do
     it 'finds or creates a song by name, maintaining uniqueness of objects by name property' do
-      song_1 = Song.find_or_create_by_name("Blank Spaces")
-      song_2 = Song.find_or_create_by_name("Blank Spaces")
+      song_1 = Song.find_or_create_by_name("Blank Space")
+      song_2 = Song.find_or_create_by_name("Blank Space")
       expect(song_1).to be_a(Song)
       expect(song_2).to be_a(Song)
       expect(song_1.name).to eq(song_2.name)
@@ -50,7 +50,7 @@ describe "Song Class Methods" do
   describe '.alphabetical' do
     it 'returns all the song instances in alphabetical order by song name' do
       song_1 = Song.create_by_name("Thriller")
-      song_2 = Song.create_by_name("Blank Spaces")
+      song_2 = Song.create_by_name("Blank Space")
       song_3 = Song.create_by_name("Call Me Maybe")
 
       expect(Song.alphabetical).to eq([song_2, song_3, song_1])
