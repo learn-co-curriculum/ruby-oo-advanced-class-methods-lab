@@ -22,7 +22,9 @@ class Song
   def save
     self.class.all << self
   end
+
 end
+
 ```
 
 The `Song` class provides a class variable `@@all` to store all instances for `Song` that are created through the instance method `Song#save`. Additionally, `Song` instances have basic properties of a name and an artist name.
@@ -79,7 +81,7 @@ Song.find_by_name("The Middle")
 
 ### `Song.find_or_create_by_name`
 
-In order to prevent duplicate songs being created that actually represent the same song based on the song name we're going to build a class method `Song.find_or_create_by_name`. This method will accept a string name for a song and either return a matching song instance with that name or create a new song with the name and return the song instance.
+In order to prevent duplicate songs being created that actually represent the same song (based on the song name), we're going to build a `Song.find_or_create_by_name` class method. This method will accept a string name for a song and either return a matching song instance with that name or create a new song with the name and return the song instance.
 
 Consider:
 
@@ -96,7 +98,7 @@ song_1 == song_2 #=> true
 
 Build a class method `Song.alphabetical` that returns all the songs in ascending (a-z) alphabetical order.
 
-Use [Array#sort_by](http://ruby-doc.org/core-2.2.3/Enumerable.html#method-i-sort_by).
+Use [Array#sort_by](http://ruby-doc.org/core/Enumerable.html#method-i-sort_by).
 
 ### `Song.new_from_filename`
 
@@ -119,7 +121,3 @@ Build a class constructor that accepts a filename in the format of "<Artist Name
 The `Song.destroy_all` class method should reset the state of the `@@all` class variable to an empty array thereby deleting all previous song instances.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-advanced-class-methods-lab' title='Ruby Advanced Class Methods Lab'>Ruby Advanced Class Methods Lab</a> on Learn.co and start learning to code for free.</p>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-advanced-class-methods-lab'>Advanced Class Methods Lab</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/ruby-advanced-class-methods-lab'>Advanced Class Methods Lab</a> on Learn.co and start learning to code for free.</p>
