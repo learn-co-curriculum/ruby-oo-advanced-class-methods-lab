@@ -38,7 +38,12 @@ describe "Song Class Methods" do
   end
 
   describe '.find_or_create_by_name' do
-    it 'finds or creates a song by name, maintaining uniqueness of objects by name property' do
+    it 'creates a new song if one doesn\'t already exist' do
+      song_1 = Song.find_or_create_by_name("Blank Space")
+      expect(song_1.name).to eq("Blank Space")
+    end
+    
+    it 'finds song by name if song has already been created' do
       song_1 = Song.find_or_create_by_name("Blank Space")
       song_2 = Song.find_or_create_by_name("Blank Space")
       expect(song_1).to be_a(Song)
