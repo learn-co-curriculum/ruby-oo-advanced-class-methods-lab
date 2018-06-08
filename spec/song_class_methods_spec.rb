@@ -35,6 +35,10 @@ describe "Song Class Methods" do
 
       expect(Song.find_by_name("Hello")).to eq(song_2)
     end
+
+    it 'returns falsey when a song name is not present in @@all' do
+      expect(Song.find_by_name("Just The Way You Are")).to be_falsey
+    end
   end
 
   describe '.find_or_create_by_name' do
