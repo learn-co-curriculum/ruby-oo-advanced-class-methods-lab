@@ -139,8 +139,8 @@ song.artist_name #=> "Taylor Swift"
 
 ### `Song.create_from_filename`
 
-Build a class constructor that accepts a filename in the format of "<Artist
-Name> - <Song Name>.mp3", for example "Taylor Swift - Blank Space.mp3". The
+Build a class constructor that accepts a filename in the format of `"<Artist
+Name> - <Song Name>.mp3"`, for example "Taylor Swift - Blank Space.mp3". The
 `Song.create_from_filename` class method should not only parse the filename
 correctly but should also save the Song instance that was created.
 
