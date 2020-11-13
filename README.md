@@ -120,8 +120,8 @@ Use [Array#sort_by](http://ruby-doc.org/core/Enumerable.html#method-i-sort_by).
 
 ### `Song.new_from_filename`
 
-Build a class constructor that accepts a filename in the format of "<Artist
-Name> - <Song Name>.mp3", for example, "Taylor Swift - Blank Space.mp3".
+Build a class constructor that accepts a filename in the format of `"<Artist
+Name> - <Song Name>.mp3"`, for example, "Taylor Swift - Blank Space.mp3".
 
 Given `Song.new_from_filename("Taylor Swift - Blank Space.mp3")`, the
 constructor should return a new `Song` instance with `song_name` set to Blank
