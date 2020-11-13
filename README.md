@@ -124,8 +124,8 @@ Build a class constructor that accepts a filename in the format of "<Artist
 Name> - <Song Name>.mp3", for example, "Taylor Swift - Blank Space.mp3".
 
 Given `Song.new_from_filename("Taylor Swift - Blank Space.mp3")`, the
-constructor should return a new `Song` instance with the song name set to Blank
-Space and the artist_name set to Taylor Swift. The filename input sent to
+constructor should return a new `Song` instance with `song_name` set to Blank
+Space and `artist_name` set to Taylor Swift. The filename input sent to
 `Song.new_from_filename` in the format of `Taylor Swift - Blank Space.mp3` must
 be parsed for the relevant components. Separate the artist name from the rest of
 the data based on the `-` delimiter. Don't forget that when you parse the song
